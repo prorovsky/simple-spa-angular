@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     template: `
         <main>
             <h1>{{pageTitle}}</h1>
-            <p>Список отелей в городе.</p>
+            <hotels-list></hotels-list>
         </main>
         `,
     //templateUrl: './app.component.html',
