@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    template: `
+        <main>
+            <h1>{{pageTitle}}</h1>
+            <p>Список отелей в городе.</p>
+        </main>
+        `,
+    //templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+    pageTitle: string = "Менеджер Отелей"
 }
