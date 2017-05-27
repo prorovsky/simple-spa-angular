@@ -11,7 +11,7 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h3>Найдено по: {{listFilter}}</h3>
+                <h3>Фильтруем по: {{listFilter}}</h3>
             </div>
         </div>
     </div>
@@ -32,7 +32,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let hotel of hotels">
+                <tr *ngFor="let hotel of hotels | hotelFilter: listFilter">
                     <td>
                         <img *ngIf="showImage"
                         [src]="hotel.imageUrl" [title]="hotel.name"

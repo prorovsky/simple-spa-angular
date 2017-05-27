@@ -1,16 +1,17 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { IHotel } from "./hotel";
 
 @Component({
     selector: "hotels-list",
     templateUrl: "./hotel-list.component.html"
 })
-export class HotelsListComponent {
+export class HotelsListComponent implements OnInit {
     pageTitle: string = "Список Отелей";
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false;
     listFilter: string = "";
-    hotels: any[] = [
+    hotels: IHotel[] = [
         {
             "hotelId": 1,
             "name": "Как Дома",
@@ -24,7 +25,7 @@ export class HotelsListComponent {
         {
             "hotelId": 2,
             "name": "Гранд Палас",
-            "vacantSuite": 19,
+            "vacantSuite": 17,
             "address": "ул. Саладина 11",
             "description": "Его многочисленные, убого тонкие по сравнению с остальным телом ножки беспомощно копошились у него перед глазами. «Что со мной случилось? » – подумал он. Это не было сном. Его комната, настоящая, разве что слишком маленькая, но обычная комната, мирно покоилась в своих четырех хорошо знакомых стенах.",
             "price": 199,
@@ -65,5 +66,9 @@ export class HotelsListComponent {
 
     toggleImage(): void {
         this.showImage = !this.showImage;
+    }
+
+    ngOnInit(): void {
+        console.log("In OnInit");
     }
 }

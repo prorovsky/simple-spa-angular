@@ -4,11 +4,13 @@ import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { HotelsListComponent } from "./hotels/hotel-list.component";
+import { HotelFilterPipe } from "./hotels/hotel-filter.pipe";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HotelsListComponent
+    HotelsListComponent,
+    HotelFilterPipe
   ],
   imports: [
     BrowserModule,
