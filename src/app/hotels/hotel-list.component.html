@@ -1,29 +1,27 @@
 <div class="panel panel-primary">
     <div class="panel-heading">
-        Список Отелей
+        <h4>{{pageTitle}}</h4>
     </div>
     <div class="panel-body">
         <div class="row">
-            <div class="col-md-2">
-                Поиск: 
-            </div>
             <div class="col-md-4">
-                <input type="text">
+                Поиск: 
+                <input type="text" [(ngModel)]="listFilter">
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h3>Найдено по:</h3>
+                <h3>Найдено по: {{listFilter}}</h3>
             </div>
         </div>
     </div>
     <div class="table-responsive">
-        <table class="table">
+        <table class="table" *ngIf="hotels && hotels.length">
             <thead>
                 <tr>
                     <th>
-                        <button class="btn btn-primary">
-                            Показать изображения
+                        <button class="btn btn-primary" (click)="toggleImage()">
+                            {{showImage ? "Скрыть" : "Показать"}} интерьер
                         </button>
                     </th>
                     <th>Название</th>
@@ -34,7 +32,19 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- TODO Список Отелей-->
+                <tr *ngFor="let hotel of hotels">
+                    <td>
+                        <img *ngIf="showImage"
+                        [src]="hotel.imageUrl" [title]="hotel.name"
+                        [style.width.px]="imageWidth" [style.margin.px]="imageMargin">
+                
+                    </td>
+                    <td>{{hotel.name}}</td>
+                    <td>{{hotel.address}}</td>
+                    <td>{{hotel.vacantSuite}}</td>
+                    <td>{{hotel.price | currency:"USD":true:"1.2-2"}}</td>
+                    <td>{{hotel.starRating}}</td>
+                </tr>
             </tbody>
         </table>
     </div>

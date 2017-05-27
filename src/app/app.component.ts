@@ -12,5 +12,5 @@ import { Component } from '@angular/core';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    pageTitle: string = "Менеджер Отелей"
+    pageTitle: string = "Отели города N"
 }

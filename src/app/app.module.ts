@@ -1,8 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AlertModule } from 'ng2-bootstrap';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 
-import { AppComponent } from './app.component';
+import { AppComponent } from "./app.component";
 import { HotelsListComponent } from "./hotels/hotel-list.component";
 
 @NgModule({
@@ -12,7 +12,7 @@ import { HotelsListComponent } from "./hotels/hotel-list.component";
   ],
   imports: [
     BrowserModule,
-    AlertModule.forRoot()
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
