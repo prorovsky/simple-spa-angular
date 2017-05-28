@@ -3,11 +3,12 @@ import { IHotel } from "./hotel";
 import { HotelService } from "./hotel.service";
 
 @Component({
-    templateUrl: "hotel-list.component.html"
+    templateUrl: "hotel-list.component.html",
+    styles: [".vacant-suite, .price { text-align: center }"]
 })
 export class HotelsListComponent implements OnInit {
     pageTitle: string = "Список Отелей";
-    imageWidth: number = 50;
+    imageWidth: number = 150;
     imageMargin: number = 2;
     showImage: boolean = false;
     listFilter: string;

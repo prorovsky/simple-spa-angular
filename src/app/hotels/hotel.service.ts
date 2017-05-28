@@ -19,6 +19,11 @@ export class HotelService {
             .catch(this.handleError);
     }
 
+    getHotel(id: number): Observable<IHotel> {
+        return this.getHotels()
+            .map((hotels: IHotel[]) => hotels.find(h => h.id == id))
+    }
+
     private handleError(error: Response){
         console.error(error);
         return Observable.throw(error.json().error || "Проблема с сервером");

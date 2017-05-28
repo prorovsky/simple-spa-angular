@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="table-responsive">
-        <table class="table" *ngIf="hotels && hotels.length">
+        <table class="table table-striped table-hover" *ngIf="hotels && hotels.length">
             <thead>
                 <tr>
                     <th>
@@ -26,8 +26,8 @@
                     </th>
                     <th>Название</th>
                     <th>Адрес</th>
-                    <th>Свободные номера</th>
-                    <th>Цена за ночь</th>
+                    <th class="vacant-suite">Свободные номера</th>
+                    <th class="price">Цена за ночь</th>
                     <th>Звезд</th>
                 </tr>
             </thead>
@@ -41,8 +41,8 @@
                     </td>
                     <td><a [routerLink]="['/hotel', hotel.id]">{{hotel.name}}</a></td>
                     <td>{{hotel.address}}</td>
-                    <td>{{hotel.vacantSuite}}</td>
-                    <td>{{hotel.price | currency:"USD":true:"1.2-2"}}</td>
+                    <td class="vacant-suite">{{hotel.vacantSuite}}</td>
+                    <td class="price">{{hotel.price | currency:"USD":true:"1.2-2"}}</td>
                     <td><star-shared [rating]="hotel.starRating"
                         (ratingClicked)="onRatingClicked($event)"></star-shared></td>
                 </tr>

@@ -1,6 +1,10 @@
-<div class="panel panel-primary">
+<div class="panel panel-primary" *ngIf="hotel">
     <div class="panel-heading">
-        {{pageTitle}}
+        {{hotel.name}}
+    </div>
+    <div class="hotel-detail">
+        <img [src]="hotel.imageUrl" class="img-thumbnail" [alt]="hotel.name">
+        <p>{{hotel.description}}</p>
     </div>
     <button class="btn btn-default" (click)="back()"><i class="glyphicon glyphicon-chevron-left"></i>Назад</button>
 </div>
