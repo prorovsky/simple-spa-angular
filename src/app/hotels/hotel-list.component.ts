@@ -3,7 +3,6 @@ import { IHotel } from "./hotel";
 import { HotelService } from "./hotel.service";
 
 @Component({
-    selector: "hotels-list",
     templateUrl: "hotel-list.component.html"
 })
 export class HotelsListComponent implements OnInit {
