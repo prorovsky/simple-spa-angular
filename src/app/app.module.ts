@@ -5,11 +5,13 @@ import { FormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import { HotelsListComponent } from "./hotels/hotel-list.component";
 import { HotelFilterPipe } from "./hotels/hotel-filter.pipe";
+import { StarComponent } from "./shared/star.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HotelsListComponent,
+    StarComponent,
     HotelFilterPipe
   ],
   imports: [

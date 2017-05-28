@@ -3,7 +3,7 @@ import { IHotel } from "./hotel";
 
 @Component({
     selector: "hotels-list",
-    templateUrl: "./hotel-list.component.html"
+    templateUrl: "hotel-list.component.html"
 })
 export class HotelsListComponent implements OnInit {
     pageTitle: string = "Список Отелей";
@@ -49,7 +49,7 @@ export class HotelsListComponent implements OnInit {
             "address": "пр. Средневековья 24",
             "description": "Затем взгляд Грегора устремился в окно, и пасмурная погода – слышно было, как по жести подоконника стучат капли дождя – привела его и вовсе в грустное настроение. «Хорошо бы еще немного поспать и забыть всю эту чепуху», – подумал он, но это было совершенно неосуществимо, он привык спать на правом боку, а в теперешнем своем состоянии он никак не мог принять этого положения. С какой бы силой ни поворачивался он на правый бок, он неизменно сваливался опять на спину.",
             "price": 99.99,
-            "starRating": 3.8,
+            "starRating": 3.5,
             "imageUrl": "./../../assets/hotel4.jpg"
         },
         {
@@ -70,5 +70,9 @@ export class HotelsListComponent implements OnInit {
 
     ngOnInit(): void {
         console.log("In OnInit");
+    }
+
+    onRatingClicked(message: string): void {
+        this.pageTitle = `Спасибо ваш голос учтен, ${message}`;
     }
 }

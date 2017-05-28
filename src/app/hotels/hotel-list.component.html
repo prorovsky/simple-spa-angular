@@ -43,7 +43,8 @@
                     <td>{{hotel.address}}</td>
                     <td>{{hotel.vacantSuite}}</td>
                     <td>{{hotel.price | currency:"USD":true:"1.2-2"}}</td>
-                    <td>{{hotel.starRating}}</td>
+                    <td><star-shared [rating]="hotel.starRating"
+                        (ratingClicked)="onRatingClicked($event)"></star-shared></td>
                 </tr>
             </tbody>
         </table>
