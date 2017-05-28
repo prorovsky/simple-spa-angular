@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HotelService } from "./hotels/hotel.service";
 
 @Component({
     selector: 'app-root',
@@ -9,7 +10,8 @@ import { Component } from '@angular/core';
         </main>
         `,
     //templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+    styleUrls: ['./app.component.css'],
+    providers: [ HotelService ]
 })
 export class AppComponent {
     pageTitle: string = "Отели города N"
