@@ -39,7 +39,7 @@
                         [style.width.px]="imageWidth" [style.margin.px]="imageMargin">
                 
                     </td>
-                    <td>{{hotel.name}}</td>
+                    <td><a [routerLink]="['/hotel', hotel.id]">{{hotel.name}}</a></td>
                     <td>{{hotel.address}}</td>
                     <td>{{hotel.vacantSuite}}</td>
                     <td>{{hotel.price | currency:"USD":true:"1.2-2"}}</td>

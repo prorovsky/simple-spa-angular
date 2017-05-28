@@ -1,6 +1,6 @@
 [
     {
-        "hotelId": 1,
+        "id": 1,
         "name": "Как Дома",
         "vacantSuite": 10,
         "address": "ул. Домашняя 7",
@@ -10,7 +10,7 @@
         "imageUrl": "./../../assets/hotel1.jpg"
     },
     {
-        "hotelId": 2,
+        "id": 2,
         "name": "Гранд Палас",
         "vacantSuite": 17,
         "address": "ул. Саладина 11",
@@ -20,7 +20,7 @@
         "imageUrl": "./../../assets/hotel2.jpg"
     },
     {
-        "hotelId": 3,
+        "id": 3,
         "name": "Эдем",
         "vacantSuite": 31,
         "address": "ул. Райская 15",
@@ -30,7 +30,7 @@
         "imageUrl": "./../../assets/hotel3.jpg"
     },
     {
-        "hotelId": 4,
+        "id": 4,
         "name": "Царские Палаты",
         "vacantSuite": 5,
         "address": "пр. Средневековья 24",
@@ -40,7 +40,7 @@
         "imageUrl": "./../../assets/hotel4.jpg"
     },
     {
-        "hotelId": 5,
+        "id": 5,
         "name": "Восточный",
         "vacantSuite": 24,
         "address": "ул. Восходящая 3",

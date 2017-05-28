@@ -10,6 +10,7 @@ import { HotelFilterPipe } from "./hotels/hotel-filter.pipe";
 import { StarComponent } from "./shared/star.component";
 import { HotelDetailComponent } from "./hotels/hotel-detail.component";
 import { LandingComponent } from "./landing/landing.component";
+import { HotelDetailGuard } from "./hotels/hotel-guard.service";
 
 @NgModule({
   declarations: [
@@ -26,13 +27,15 @@ import { LandingComponent } from "./landing/landing.component";
     HttpModule,
     RouterModule.forRoot([
       {path: "hotels", component: HotelsListComponent},
-      {path: "hotel/:id", component: HotelDetailComponent},
+      {path: "hotel/:id", 
+        canActivate: [HotelDetailGuard],
+        component: HotelDetailComponent},
       {path: "landing", component: LandingComponent},
       {path: "", redirectTo: "landing", pathMatch: "full"},
       {path: "**", redirectTo: "landing", pathMatch: "full"}
     ])
   ],
-  providers: [],
+  providers: [HotelDetailGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
